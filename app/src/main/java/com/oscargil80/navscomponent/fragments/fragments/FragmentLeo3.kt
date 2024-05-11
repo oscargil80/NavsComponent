@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.oscargil80.navscomponent.R
 import com.oscargil80.navscomponent.databinding.FragmentLeo3Binding
 
@@ -16,6 +19,7 @@ class FragmentLeo3 : Fragment() {
 
     private var _binding: FragmentLeo3Binding? = null
     private val binding get() = _binding!!
+    private val args: FragmentLeo3Args by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,18 +42,16 @@ class FragmentLeo3 : Fragment() {
             val segundaria = binding.SegundariaDatosLeo.text.toString()
             val univ =  binding.UnivDatosLeo.text.toString()
 
-            val bundle = bundleOf(
-                "primaria" to primaria,
-                "segundaria" to segundaria,
-                "univ" to univ
+            var action = FragmentLeo3Directions.actionFragmentLeo3ToLeoFinalFragment(
+                nombre = args.nombre,
+                edad = args.edad,
+                ciudad =  args.ciudad,
+                univ = univ
             )
 
-            requireActivity().supportFragmentManager.beginTransaction().apply {
-                setFragmentResult("educacion", bundle)
-                replace(R.id.FragmentCont, LeoFinalFragment())
-                addToBackStack("null")
-                commit()
-            }
+
+
+        findNavController().navigate(action)
         }
     }
 

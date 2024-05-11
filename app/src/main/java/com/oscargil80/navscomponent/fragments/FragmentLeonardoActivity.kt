@@ -17,9 +17,6 @@ class FragmentLeonardoActivity : AppCompatActivity() {
 
         binding = ActivityFragmentLeonardoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.FragmentCont, FragmentLeo1())
-            commit()
-        }
+
     }
 }

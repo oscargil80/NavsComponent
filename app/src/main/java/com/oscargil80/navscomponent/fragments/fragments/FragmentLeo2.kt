@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.oscargil80.navscomponent.R
 import com.oscargil80.navscomponent.databinding.FragmentLeo2Binding
 
@@ -15,6 +17,8 @@ import com.oscargil80.navscomponent.databinding.FragmentLeo2Binding
 class FragmentLeo2 : Fragment() {
   private var _binding:FragmentLeo2Binding? = null
    private val binding get() = _binding!!
+
+    private val args: FragmentLeo2Args by navArgs()
 
 
     override fun onCreateView(
@@ -27,6 +31,7 @@ class FragmentLeo2 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.btnFrag3leo.setOnClickListener {
             if(binding.CiudadDatosLeo.text.toString().isBlank() || binding.estadoDatosLeo.text.toString().isBlank() || binding.DireccionDatosLeo.text.toString().isBlank())
             {
@@ -37,19 +42,17 @@ class FragmentLeo2 : Fragment() {
             val estado = binding.estadoDatosLeo.text.toString()
             val direccion =  binding.DireccionDatosLeo.text.toString()
 
-            val bundle = bundleOf(
-                "ciudad" to ciudad,
-                "estado" to estado,
-                "direccion" to direccion
+            var action = FragmentLeo2Directions.actionFragmentLeo2ToFragmentLeo3(
+                nombre = args.nombre,
+                edad = args.edad,
+                ciudad = ciudad
             )
-            requireActivity().supportFragmentManager.beginTransaction().apply {
-                setFragmentResult("ubicacion", bundle)
-                val fragment3 = FragmentLeo3()
-                replace(R.id.FragmentCont, fragment3)
-                addToBackStack("null")
-                commit()
-            }
+
+
+            findNavController().navigate(action)
         }
+
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

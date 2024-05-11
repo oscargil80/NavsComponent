@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentLeo1">
+
+    <fragment
+        android:id="@+id/fragmentLeo1"
+        android:name="com.oscargil80.navscomponent.fragments.fragments.FragmentLeo1"
+        android:label="Primer Fragmento"
+        tools:layout="@layout/fragment_leo1" >
+        <action
+            android:id="@+id/action_fragmentLeo1_to_fragmentLeo2"
+            app:destination="@id/fragmentLeo2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLeo2"
+        android:name="com.oscargil80.navscomponent.fragments.fragments.FragmentLeo2"
+        android:label="Segundo Fragmento"
+        tools:layout="@layout/fragment_leo2" >
+        <action
+            android:id="@+id/action_fragmentLeo2_to_fragmentLeo3"
+            app:destination="@id/fragmentLeo3" />
+
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="edad"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLeo3"
+        android:name="com.oscargil80.navscomponent.fragments.fragments.FragmentLeo3"
+        android:label="Tercer Fragmento"
+        tools:layout="@layout/fragment_leo3" >
+        <action
+            android:id="@+id/action_fragmentLeo3_to_leoFinalFragment"
+            app:destination="@id/leoFinalFragment" />
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="edad"
+            app:argType="string" />
+        <argument
+            android:name="ciudad"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/leoFinalFragment"
+        android:name="com.oscargil80.navscomponent.fragments.fragments.LeoFinalFragment"
+        android:label="Fragmento Final"
+        tools:layout="@layout/fragment_leo_final" >
+        <action
+            android:id="@+id/action_leoFinalFragment_to_infoDialog"
+            app:destination="@id/infoDialog" />
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="edad"
+            app:argType="string" />
+        <argument
+            android:name="ciudad"
+            app:argType="string" />
+        <argument
+            android:name="univ"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/infoDialog"
+        android:name="com.oscargil80.navscomponent.fragments.dialogs.InfoDialog"
+        android:label="InfoDialog" />
+</navigation>
