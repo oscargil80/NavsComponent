@@ -1,4 +1,4 @@
-package com.oscargil80.navscomponent
+package com.oscargil80.navscomponent.fragments
 
 data class datos( var nombre: String?,
                   var apellido: String?,
