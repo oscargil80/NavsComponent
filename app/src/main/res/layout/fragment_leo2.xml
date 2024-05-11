@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#757575"
-    tools:context=".fragments.FragmentLeo2">
+    tools:context=".fragments.fragments.FragmentLeo2">
 
     <TextView
         android:id="@+id/titDatosleo"

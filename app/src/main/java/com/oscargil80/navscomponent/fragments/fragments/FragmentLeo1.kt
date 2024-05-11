@@ -1,4 +1,4 @@
-package com.oscargil80.navscomponent.fragments
+package com.oscargil80.navscomponent.fragments.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

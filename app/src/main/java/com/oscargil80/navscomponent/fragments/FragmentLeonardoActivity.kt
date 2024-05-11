@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.oscargil80.navscomponent.R
 import com.oscargil80.navscomponent.databinding.ActivityFragmentLeonardoBinding
+import com.oscargil80.navscomponent.fragments.fragments.FragmentLeo1
 
 
 class FragmentLeonardoActivity : AppCompatActivity() {
