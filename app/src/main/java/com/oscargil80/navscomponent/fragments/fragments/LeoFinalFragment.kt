@@ -32,12 +32,27 @@ class LeoFinalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        binding.tvNombre.text = "${args.nombre}, ${args.univ}"
+        var  datos = datos(args.nombre,args.apellido, args.edad, args.ciudad, args.estado, args.direccion, args.primaria, args.segundaria, args.univ)
+        llenarcampos(datos)
         binding.btnIrDialog.setOnClickListener {
             findNavController().navigate(R.id.infoDialog)
         }
     }
+
+    private fun llenarcampos(datos: datos) {
+        binding.tvNombre.setText(datos.nombre)
+        binding.tvApellido.setText(datos.apellido)
+        binding.tvEdad.setText(datos.edad)
+
+        binding.tvCiudad.setText(datos.ciudad)
+        binding.tvEstado.setText(datos.estado)
+        binding.tvDireccion.setText(datos.direccion)
+
+        binding.tvPrimaria.setText(datos.primaria)
+        binding.tvSegundaria.setText(datos.segundaria)
+        binding.tvUniv.setText(datos.univ)
+    }
+
 
 
     override fun onDestroyView() {

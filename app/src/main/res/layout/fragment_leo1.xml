@@ -5,9 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#795548"
+    android:background="#E6CCC5"
     tools:context=".fragments.fragments.FragmentLeo1">
-
 
     <TextView
         android:id="@+id/titDatosleo"
@@ -15,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="#D7CCC8"
+        android:textColor="@color/black"
         android:textAllCaps="true"
         android:gravity="center"
 
@@ -27,53 +26,73 @@
         android:padding="15dp"
         />
 
-    <EditText
-        android:id="@+id/NombreDatosLeo"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilNombreDatosLeo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre"
-        android:textSize="20sp"
-        android:text="Oscar"
-        android:padding="15dp"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:layout_margin="25dp"
+        android:layout_margin="@dimen/default_margin"
         app:layout_constraintTop_toBottomOf="@id/titDatosleo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" >
 
-    <EditText
-        android:id="@+id/ApellidoDatosLeo"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NombreDatosLeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:text="Oscar"
+            android:hint="Nombre" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilApellidoDatosLeo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:hint="Apellido"
-
-        android:text="medina"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:layout_margin="25dp"
-        app:layout_constraintTop_toBottomOf="@id/NombreDatosLeo"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/ilNombreDatosLeo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" >
 
-    <EditText
-        android:id="@+id/EdadDatosLeo"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ApellidoDatosLeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:text="Medina"
+            android:hint="Apellido" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilEdadDatosLeo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:hint="Edad"
-        android:text="44"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:layout_margin="25dp"
-        app:layout_constraintTop_toBottomOf="@id/ApellidoDatosLeo"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/ilApellidoDatosLeo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EdadDatosLeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:text="44"
+            android:hint="Edad" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnFrag2leo"

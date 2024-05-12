@@ -44,8 +44,13 @@ class FragmentLeo3 : Fragment() {
 
             var action = FragmentLeo3Directions.actionFragmentLeo3ToLeoFinalFragment(
                 nombre = args.nombre,
+                apellido = args.apellido,
                 edad = args.edad,
-                ciudad =  args.ciudad,
+                ciudad = args.ciudad,
+                estado = args.estado,
+                direccion = args.direccion,
+                primaria = primaria,
+                segundaria = segundaria,
                 univ = univ
             )
 

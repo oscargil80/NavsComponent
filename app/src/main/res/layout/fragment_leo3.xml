@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#212121"
+    android:background="#FAE9E9"
     tools:context=".fragments.fragments.FragmentLeo3">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="#D7CCC8"
+        android:textColor="@color/black"
         android:textAllCaps="true"
         android:gravity="center"
         android:text="Datos Educacion"
@@ -25,52 +25,72 @@
         android:padding="15dp"
         />
 
-    <EditText
-        android:id="@+id/PrimariaDatosLeo"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilPrimariaDatosLeo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Donde Estudio Primaria"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:layout_margin="25dp"
-        android:text="haydee"
+        android:layout_margin="@dimen/default_margin"
         app:layout_constraintTop_toBottomOf="@id/titDatosleo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/SegundariaDatosLeo"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PrimariaDatosLeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:text="Jose Martin"
+            android:hint="Educacion Primaria" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilSegundariaDatosLeo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:text="martir"
-        android:hint="Donde Estudio Segundaria"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:layout_margin="25dp"
-        app:layout_constraintTop_toBottomOf="@id/PrimariaDatosLeo"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/ilPrimariaDatosLeo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/UnivDatosLeo"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/SegundariaDatosLeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:text="Haydee Calles"
+            android:hint="Educacion Segundaria" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilUnivDatosLeo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:hint="Donde Estudio Universidad"
-        android:text="santiagfo"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:layout_margin="25dp"
-        app:layout_constraintTop_toBottomOf="@id/SegundariaDatosLeo"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/ilSegundariaDatosLeo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UnivDatosLeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:text="IUPSM"
+            android:hint="Educacion Universitaria" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnFrag4leo"
@@ -84,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/UnivDatosLeo"
+        app:layout_constraintTop_toBottomOf="@id/ilUnivDatosLeo"
         android:padding="15dp"
         android:layout_margin="25dp"
         app:layout_constraintVertical_bias="0.885" />

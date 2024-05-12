@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_leo1" >
         <action
             android:id="@+id/action_fragmentLeo1_to_fragmentLeo2"
-            app:destination="@id/fragmentLeo2" />
+            app:destination="@id/fragmentLeo2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/fragmentLeo2"
@@ -21,15 +25,20 @@
         tools:layout="@layout/fragment_leo2" >
         <action
             android:id="@+id/action_fragmentLeo2_to_fragmentLeo3"
-            app:destination="@id/fragmentLeo3" />
+            app:destination="@id/fragmentLeo3"  app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
         <argument
             android:name="nombre"
             app:argType="string" />
         <argument
+            android:name="apellido"
+            app:argType="string" />
+        <argument
             android:name="edad"
             app:argType="string" />
-
     </fragment>
     <fragment
         android:id="@+id/fragmentLeo3"
@@ -38,15 +47,27 @@
         tools:layout="@layout/fragment_leo3" >
         <action
             android:id="@+id/action_fragmentLeo3_to_leoFinalFragment"
-            app:destination="@id/leoFinalFragment" />
+            app:destination="@id/leoFinalFragment"  app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <argument
             android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="apellido"
             app:argType="string" />
         <argument
             android:name="edad"
             app:argType="string" />
         <argument
             android:name="ciudad"
+            app:argType="string" />
+        <argument
+            android:name="estado"
+            app:argType="string" />
+        <argument
+            android:name="direccion"
             app:argType="string" />
     </fragment>
     <fragment
@@ -56,15 +77,33 @@
         tools:layout="@layout/fragment_leo_final" >
         <action
             android:id="@+id/action_leoFinalFragment_to_infoDialog"
-            app:destination="@id/infoDialog" />
+            app:destination="@id/infoDialog"  app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <argument
             android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="apellido"
             app:argType="string" />
         <argument
             android:name="edad"
             app:argType="string" />
         <argument
             android:name="ciudad"
+            app:argType="string" />
+        <argument
+            android:name="estado"
+            app:argType="string" />
+        <argument
+            android:name="direccion"
+            app:argType="string" />
+        <argument
+            android:name="primaria"
+            app:argType="string" />
+        <argument
+            android:name="segundaria"
             app:argType="string" />
         <argument
             android:name="univ"

@@ -39,11 +39,9 @@ class FragmentLeo1 : Fragment() {
             val apellido = binding.ApellidoDatosLeo.text.toString()
             val edad =  binding.EdadDatosLeo.text.toString()
 
-            val action = FragmentLeo1Directions.actionFragmentLeo1ToFragmentLeo2(nombre, edad)
+            val action = FragmentLeo1Directions.actionFragmentLeo1ToFragmentLeo2(nombre, apellido, edad)
             findNavController().navigate(action)
         }
-
-
     }
 
     override fun onDestroyView() {
