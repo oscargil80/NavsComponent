@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navDatosPersonales"
+    android:title="Datos Personales"
+    android:icon="@drawable/ic_baseline_home_24"/>
+
+    <item android:id="@+id/navDireccion"
+        android:title="Direccion"
+        android:icon="@drawable/ic_baseline_camera_alt_24"/>
+
+    <item android:id="@+id/navEducacion"
+        android:title="Eduacacion"
+        android:icon="@drawable/ic_baseline_insert_photo_24"/>
+
+    <item android:id="@+id/navFinal"
+        android:title="Final"
+        android:icon="@drawable/ic_baseline_message_24"/>
+
+</menu>
